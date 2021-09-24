@@ -8,7 +8,9 @@ import (
 )
 
 func GetConnection() *sql.DB {
-	sqlConn := "xhbbzrmj:kVBlt0mq5dUO61PcebjEh240_vmTiIr1@tcp(arjuna.db.elephantsql.com)/xhbbzrmj"
+	sqlConn := "postgres://xhbbzrmj:kVBlt0mq5dUO61PcebjEh240_vmTiIr1@arjuna.db.elephantsql.com/xhbbzrmj"
+	//connStr := "user:passwd@tcp(127.0.0.1:5432)/dbname"
+	//connStr := "user:passwd@tcp(127.0.0.1:3306)/dbname"
 	db, err := sql.Open("postgres", sqlConn)
 	if err != nil {
 		log.Fatal("can't connect to database : ", err)

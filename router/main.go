@@ -11,9 +11,9 @@ import (
 func HandlerRouter() http.Handler {
 	r := mux.NewRouter()
 	r.HandleFunc("/profile/submit", sv.ProfileSubmitSv).Methods("POST")
-	r.HandleFunc("/profile/detail", sv.ProfileDetailSv).Methods("POST")
+	r.HandleFunc("/profile/detail", sv.ProfileDetailSv).Methods("GET")
 	r.HandleFunc("/profile/list", sv.ProfileListSv).Methods("POST")
-	r.HandleFunc("/profile/delete", sv.ProfileDeleteSv).Methods("POST")
+	r.HandleFunc("/profile/delete", sv.ProfileDeleteSv).Methods("GET")
 
 	c := cors.New(cors.Options{
 		AllowedOrigins:   []string{"*"},

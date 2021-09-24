@@ -6,3 +6,7 @@ type Profile struct {
 	Email *string `json:"email"`
 	Age   *int64  `json:"age"`
 }
+
+type DelResult struct {
+	RowNum int64 `json:"rowNum"`
+}
